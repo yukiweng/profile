@@ -1,65 +1,39 @@
-body{
-	background: #efefef;
-	margin:0;
-	color:black;
-}
-a{
-	text-decoration:none;
-}
-ul{	
-	padding:0;
-	margin:0;
-}
-ul>li{
-	list-style: none;
-}
-.clearfix::after{
-	content: '';
-	display: block;
-	clear: both;
-}
+body{background: #efefef; margin:0; color:black; } 
+a{text-decoration:none; } 
+ul{padding:0; margin:0; } 
+ul>li{list-style: none; }
 
-[date-x].offer{
+.clearfix::after{content: ''; display: block; clear: both; }
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
 
-}
+/*导航条*/
+.topNavBar nav>ul{padding:0px; margin: 0px }
 
-.topNavBar nav>ul{
-	padding:0px;
-	margin: 0px
-}
-
-.topNavBar nav>ul>li{
-float: left;
-margin-left:17px;
-margin-right: 17px;
-position:relative;
-}
+.topNavBar nav>ul>li{float: left; margin-left:17px; margin-right: 17px; position:relative; }
 .topNavBar nav>ul>li>a{
-font-size: 12px;
-font-weight: bold;
-display: block;
-border-top: 3px solid transparent;
-border-bottom: 3px solid transparent;
-padding-top:6px;
-padding-bottom: 5px; 
-position: relative;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	padding-top:6px;
+	padding-bottom: 5px; 
+	position: relative;
 }
 
 .topNavBar nav>ul>li.active>a::after,
 .topNavBar nav>ul>li.highlight>a::after{
-content: '';
-position: absolute;
-top: 100%;
-right:0;
-width: 100%;
-height: 3px;
-background:#e06567;
-animation:menuSlide 0.3s;
+	content: '';
+	position: absolute;
+	top: 100%;
+	right:0;
+	width: 100%;
+	height: 3px;
+	background:#e06567;
+	animation:menuSlide 0.3s;
 }
-@keyframes menuSlide{
-	0%{width: 0}
-	100%{width:100%;}
-}
+@keyframes menuSlide{0%{width: 0} 100%{width:100%;} }
+@keyframes submenuSlide{0%{margin-right:100% } 100%{margin-right: 0} }
 
 .topNavBar .submenu{
 	display: none;
@@ -71,28 +45,10 @@ animation:menuSlide 0.3s;
 	animation: submenuSlide 0.3s;
 	box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
-
-@keyframes submenuSlide{
-0%{margin-right:100% }
-100%{margin-right: 0}
-}
-.topNavBar li.active>.submenu{
-	display: block;
-}
-
-.topNavBar .submenu li{
-	white-space: nowrap; /*不换行*/
-	padding: 5px 10px;
-}
-
-.topNavBar a{
-float: left;
-color:inherit;
-text-decoration: none;
-}
-.topNavBar nav{
-float: right;
-}
+.topNavBar li.active>.submenu{display: block; }
+.topNavBar .submenu li{white-space: nowrap; /*不换行*/ padding: 5px 10px; }
+.topNavBar a{float: left; color:inherit; text-decoration: none; }
+.topNavBar nav{float: right; }
 .topNavBar {
 	clear:both;
 	padding:20px 0px;
@@ -108,21 +64,10 @@ float: right;
 	box-shadow: 0 0 10px rgba(0,0,0,0.25);
 	color:#3d4451;
 }
-.topNavBar-inner{
-	padding:0 16px;
-}
-
-.topNavBar .logo{
-	font-size: 24px;
-	font-family: "arial black";
-}
-.rs{
-	margin-right: 4px;
-	color:#e6686a;
-}
-.card{
-	color:#9a9da2;
-}
+.topNavBar-inner{padding:0 16px; }
+.topNavBar .logo{font-size: 24px; font-family: "arial black"; }
+.rs{margin-right: 4px; color:#e6686a; }
+.card{color:#9a9da2; }
 .banner{
 	background-image: url(./img/rs-cover.jpg);
 	height: 515px; 
@@ -133,6 +78,7 @@ float: right;
 	height: 515px;
 	background-color:rgba(0,0,0,0.7);
 }
+
 
 .userCard{
 	max-width: 940px;
@@ -160,17 +106,13 @@ float: right;
 	left:4px;
 	top:100%;
 }
-.userCard .picture{
-	float: left;
-}
+.userCard .picture{float: left; }
 .userCard .text{
 	float: left;
 	margin-left: 50px;
 	width: 470px;
 }
-.userCard .pictureAndText{
-	padding:50px;
-}
+.userCard .pictureAndText{padding:50px; }
 
 .userCard hr{
 	margin-top: 20px;
@@ -241,20 +183,20 @@ main .resume:hover{
 }
 
 section.skills,
-section.portfolio{
+section.portfolio,
+section.messages{
 	max-width: 940px;
 	margin:80px auto;
 }
 section.skills h2,
-section.portfolio h2{
+section.portfolio h2,
+section.message h2{
 	text-align: center;
 	color: #3d4451;
 	font-size: 34px;
 }
-section.skills h3{
-	font-size: 14px;
+section.skills h3{font-size: 14px;}
 
-}
 section.skills ol{
 	background: white;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
@@ -265,9 +207,7 @@ section.skills ol li{
 	float: left;
 	width: 48%;
 }
-section.skills ol li:nth-child(even){
-	float: right;
-}
+section.skills ol li:nth-child(even){float: right; }
 section.skills .progressBar{
 	height: 3px;
 	background: #fae1e1;
@@ -295,45 +235,6 @@ section.portfolio{
 	text-align: center;
 	margin: 80px auto;
 }
-section.portfolio nav{
-	display: inline-block;
-}
-section.portfolio nav ol{
-	list-style: none;
-	display: inline-block;
-	vertical-align: top;
-	padding: 0;
-}
-section.portfolio nav ol li{
-	float: left;
-	margin: 0 20px;
-	cursor: pointer;
-}
-section.portfolio .bar{
-	border-radius: 3px;
-	background: white;
-	height: 5px;
-	margin-bottom: 15px;
-}
-section.portfolio .bar-inner{
-	background: #e6686a;
-	border-radius: 3px;
-	height: 100%;
-	transition: all 0.3s;
-}
-section.portfolio .bar.state-1 .bar-inner{
-	margin-left: 0;
-	width: 70px;
-}
-section.portfolio .bar.state-2 .bar-inner{
-	margin-left: 70px;
-	width: 80px;
-}
-section.portfolio .bar.state-3 .bar-inner{
-	margin-left: 150px;
-	width: 126px;
-}
-
 section.portfolio .works{
 	position: relative;
 	height: 597px;
@@ -343,3 +244,39 @@ section.portfolio .small{
 	position: absolute;
 }
 
+.swiper-container {
+	width: 800px;
+	height: 600px;
+}
+section.portfolio .swiper-button-prev,.swiper-button-next{
+	background: rgba(255,255,255,0.5);
+	height: 64px;
+	width:64px;
+	border-radius: 50%;
+	color:#e6686a;
+}
+section.portfolio .swiper-button-prev:focus,.swiper-button-next:focus{
+	outline: none;
+}
+section.portfolio .swiper-button-prev{
+	left:auto;
+	right:100%;
+}
+section.portfolio .swiper-button-next{
+	right:auto;
+	left:100%;
+}
+
+section.message form{
+	max-width: 600px;
+	margin:20px auto;
+}
+section.message ul{
+	max-width:600px;
+	border-top: 1px solid #DDD;
+	margin:0 auto;
+}
+section.message ul>li{
+	border-bottom:1px solid #DDD;
+	padding: 14px;
+}
